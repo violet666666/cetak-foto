@@ -26,4 +26,7 @@ public class KatalogFotoUtil {
     public static List<KatalogFoto> getKatalogFotoList(){
         return katalogFotoList;
     }
+    public static KatalogFoto getKatalogFotoAt(int i){
+        return katalogFotoList.get(i);
+    }
 }
