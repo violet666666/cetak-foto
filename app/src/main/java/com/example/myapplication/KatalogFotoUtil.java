@@ -6,12 +6,12 @@ import java.util.List;
 public class KatalogFotoUtil {
     private static int[] ridArray = {
             R.drawable.satu,
-            R.drawable.satu,
+            R.drawable.dua,
     };
 
     private  static String[] filenameArray ={
             "satu",
-            "dua"
+            "dua",
     };
 
     private static List<KatalogFoto> katalogFotoList;

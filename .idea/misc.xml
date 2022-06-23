@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/tegar/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_keranjang_belanja.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/tegar/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/tegar/AndroidStudioProjects/MyApplication/app/src/main/res/layout/katalog_foto_item.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/tegar/AndroidStudioProjects/MyApplication/app/src/main/res/layout/order_foto_item.xml" value="0.15" />
       </map>
     </option>
   </component>
@@ -13,5 +15,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.17481884057971014" />
+      </ProjectState>
+    </option>
   </component>
 </project>

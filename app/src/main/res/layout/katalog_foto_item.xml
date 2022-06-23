@@ -7,9 +7,10 @@
 
     <ImageView
         android:id="@+id/iv_katalog_foto"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="320dp"
         android:layout_weight="1"
+
         app:srcCompat="@drawable/satu" />
 
     <TextView
@@ -47,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:text="4R" />
+            android:text="4R"/>
         <Button
             android:id="@+id/btn_ukuran8r"
             android:layout_width="wrap_content"

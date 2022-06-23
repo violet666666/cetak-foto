@@ -13,16 +13,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class KatalogFotoListAdapter extends RecyclerView.Adapter<KatalogFotoListAdapter.KatalogFotoViewHolder> {
 
-    private final LayoutInflater mInflater;
+    private LayoutInflater mInflater;
 
     public KatalogFotoListAdapter(Context context){
         mInflater = LayoutInflater.from(context);
+
     }
 
     @NonNull
     @Override
     public KatalogFotoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = mInflater.inflate(R.layout.katalog_foto_item, parent);
+        View itemView = mInflater.inflate(R.layout.katalog_foto_item, parent, false);
         return new KatalogFotoViewHolder(itemView, this);
     }
 
@@ -30,7 +31,7 @@ public class KatalogFotoListAdapter extends RecyclerView.Adapter<KatalogFotoList
     public void onBindViewHolder(@NonNull KatalogFotoViewHolder holder, int position) {
         KatalogFoto katalogFoto = KatalogFotoUtil.getKatalogFotoAt(position);
         holder.ivKatalogFoto.setImageResource(katalogFoto.getResId());
-        holder.tvFilename.setText(katalogFoto.getFilename());
+        holder.tvFilenameKatalogFoto.setText(katalogFoto.getFilename());
     }
 
     @Override
@@ -42,7 +43,7 @@ public class KatalogFotoListAdapter extends RecyclerView.Adapter<KatalogFotoList
         final Button btnCetak;
         final Button[] btnUkuranArray;
         final ImageView ivKatalogFoto;
-        final TextView tvFilename;
+        final TextView tvFilenameKatalogFoto;
         private  KatalogFotoListAdapter mAdapter;
 
         private int[] resBtnUkuranArray = {
@@ -58,12 +59,19 @@ public class KatalogFotoListAdapter extends RecyclerView.Adapter<KatalogFotoList
 
             btnCetak = itemView.findViewById(R.id.btn_cetak);
             ivKatalogFoto = itemView.findViewById(R.id.iv_katalog_foto);
-            tvFilename = itemView.findViewById(R.id.tv_katalog_filename);
+            tvFilenameKatalogFoto = itemView.findViewById(R.id.tv_katalog_filename);
 
             btnUkuranArray = new Button[resBtnUkuranArray.length];
 
             for(int i=0;i<resBtnUkuranArray.length;i++){
                 btnUkuranArray[i] = itemView.findViewById(resBtnUkuranArray[i]);
+
+                btnUkuranArray[i].setOnClickListener(view -> {
+                    Button btn = (Button) view;
+                    int itemPos = getLayoutPosition();
+                    OrderFotoUtil.addOrder(KatalogFotoUtil.getKatalogFotoAt(itemPos),
+                            btn.getText().toString());
+                });
             }
         }
     }
