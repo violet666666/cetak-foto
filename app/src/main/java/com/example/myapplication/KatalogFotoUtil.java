@@ -7,11 +7,25 @@ public class KatalogFotoUtil {
     private static int[] ridArray = {
             R.drawable.satu,
             R.drawable.dua,
+            R.drawable.tiga,
+            R.drawable.empat,
+            R.drawable.lima,
+            R.drawable.enam,
+            R.drawable.tujuh,
+            R.drawable.delapan,
+            R.drawable.sembilan,
     };
 
     private  static String[] filenameArray ={
-            "satu",
-            "dua",
+            "lofi satu",
+            "lofi dua",
+            "lofi tiga",
+            "lofi empat",
+            "lofi lima",
+            "lofi enam",
+            "lofi tujuh",
+            "lofi delapan",
+            "lofi sembilan",
     };
 
     private static List<KatalogFoto> katalogFotoList;
